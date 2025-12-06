@@ -1,0 +1,439 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Racing+Sans+One&display=swap');
+
+/* -------------------- CSS RESET -------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul, menu {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --white: #FFFFFF;
+    --lightgray: #F2F2F2;
+    --darkblue: #0A0474;
+    --red: #DA211F;
+    --black: #0D0D0D;
+    --gold: #ffca43;
+    /* --lightblue: rgba(122, 191, 191, .5); */
+}
+/* --------------------GLOBAL STYLES (mobile first/small) -------------------- */
+
+section {
+    height: 100vh;
+}
+
+form {
+    /* max-width: 35vw; */
+    width: 400px;
+}
+input[type=text],
+input[type=tel],
+input[type=email],
+textarea,
+fieldset {
+    width: 85%;
+}
+
+input.error {
+    border: 2px solid red;
+}
+textarea.error {
+    border: 2px solid red;
+}
+#errorMessage {
+    color: red;
+}
+.reqStar {
+    color: red;
+}
+.hide {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--red);
+    height: 36px;
+    align-items: center;
+}
+footer {
+    background-color: var(--red);
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+nav ul {
+    display: flex;
+    /* background-color: aquamarine; */
+    /* justify-content: space-between; */
+    margin-right: 81px;
+}
+nav li {
+    list-style-type: none;
+    margin-left: 81px;
+}
+nav li a {
+    text-decoration: none;
+    color: var(--white)
+}
+nav li a:hover {
+    color: var(--gold)
+}
+h1 {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 27px;
+    margin-right: 300px;
+    color: var(--white);
+}
+h2, h3, h4 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+h2 {
+    font-size: 24px;
+    letter-spacing: .25em;
+}
+p, a, label, button, input[type=submit], legend, span, footer {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+section#contact div.contactContainer {
+    display: flex;
+}
+section#main {
+    /* position: relative; */
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    /* align-self: flex-end; */
+    
+}
+
+div.social {
+    display: flex;
+}
+
+section#services #serviceImage {
+    width: 500px;
+    height: 500px;
+    margin: 48px;
+    margin-left: 36px;
+}
+section#services h2 {
+    margin-top: 48px;
+}
+section#services p {
+    margin-top: 36px;
+}
+
+section#services #serviceImage img {
+    /* height: 70vh; */
+    /* width: 45vw; */
+    height: 100%;    
+    width: 100%;    
+}
+
+/* section#services ul {
+    display: flex;
+    justify-content: space-around;
+} */
+#serviceContent {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+section#services h2#title {
+    display: none;
+}
+
+section#serviceCarousel {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: first baseline;
+}
+
+section#serviceCarousel #slick-carousel {
+    max-width: 55%;
+    max-height: 55%;
+    /* overflow: hidden; */
+}
+
+section#serviceCarousel #slick-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#slick-carousel {
+    /* background: #ffca43; */
+    margin: 0px;
+    padding: 0px;
+
+    .slick-slide {
+        .slide-content {
+            margin: 0 10px;
+            padding: 50px 100px;
+            background: #FFFFFF;
+        }
+    }
+
+    .slick-list {
+        margin: 20px 0px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+
+        right: 35%;
+        /* bottom: 15%; */
+        top: 169%;
+
+        background: var(--red);
+        width: 25px;
+        height: 25px;
+
+        border-radius: 50%;
+
+        z-index: 999;
+
+        &:before {
+            content: ">";
+            font-weight: 900;
+            position: relative;
+            bottom: 4px;
+            left: 1px;
+            color: var(--gold);
+            font-size: 24px;
+        }
+    }
+
+    .slick-prev {
+
+        left: 35%;
+        
+        
+        &:before {
+            content: "<";
+
+            /* position: relative; */
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            font-weight: 900;
+            color: var(--gold);
+
+        }
+    }
+
+    .slick-dots {
+        list-style: none;
+        margin: 20px auto;
+        display: flex;
+        /* text-align: center; */
+        position: relative;
+        justify-content: center;
+        /* text-align: end; */
+        /* z-index: 999; */
+
+        li {
+            display: inline-block;
+            /* z-index: 999; */
+
+            button {
+                transition: 0.2s background-color ease-in-out 0s;
+                border: none;
+                padding: 0;
+                color: transparent;
+
+                
+                width: 14px;
+                height: 14px;
+                background-color: #3f3f3f;
+
+                /* margin-right: 10px; */
+                border-radius: 50%; 
+                /* z-index: 999; */
+                /* outline: #ffca43; */
+            }
+
+            &.slick-active button { 
+                background-color: var(--black); 
+                border: var(--gold) 2px solid;
+                box-shadow: 0 0 20px chartreuse;
+                padding: 7px;
+            }
+        }
+    }
+}
+
+section#win {
+    background-color: var(--red);
+}
+
+section#win {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.winContainer {
+    display: flex;
+    flex-direction: column;
+}
+section#win h2 {
+    text-decoration: underline;
+    /* margin-top: -210px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section#win p {
+    margin-top: 45px;
+}
+div.randomNumInput {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+div.buttonContainer {
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    margin-top: 84px;
+    margin-bottom: 84px;
+    /* align-items: center; */
+}
+div.gResultContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 44%;
+    top: 70%;
+}
+#gameResult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div.contactContainer {
+    /* background-color: chartreuse; */
+    margin-top: -80px;
+}
+div.contactContainer h2 {
+    margin-bottom: 27px;
+}
+
+div.socialsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+div.social {
+    margin-top: 20px;
+}
+#dark-mode:hover {
+    color: var(--gold);
+    transition: all 1.0s ease-in-out;
+}
+#light-mode:hover {
+    color: var(--gold);
+    transition: all 1.0s ease-in-out;
+}
+svg#light-mode {
+    fill: var(--white);
+}
+#recording,
+#mixing,
+#mastering {
+    color: var(--black);
+}
+
+
+#winMerch {
+    display: flex;
+}
+
+#winMerch div {
+    display: flex;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
+
+#winMerch div:nth-child(2) {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#winMerch div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid var(--gold);
+}
+
+#merchPrize {
+    display: flex;
+    flex-direction: column;
+    width: 268px;
+    height: auto;
+}
+
+#merchPrize img {
+    width: 100%;
+    height: 100%;
+}

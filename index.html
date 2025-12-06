@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universoul</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="script.js" async></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+<body>
+    <header id="home">
+        <nav>
+            <h1>UNIVERSOUL RECORDS</h1>
+            <ul>
+                <li><a href="#services" class="nav-opt">Mission</a></li>
+                <li><a href="#serviceCarousel" class="nav-opt">Services</a></li>
+                <li><a href="#win" class="nav-opt">Win</a></li>
+                <li><a href="#contact" class="nav-opt">Contact</a></li>
+            </ul>
+            <svg id="dark-mode" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M7.05 4.05A7 7 0 0 1 19 9c0 2.407-1.197 3.874-2.186 5.084l-.04.048C15.77 15.362 15 16.34 15 18a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1c0-1.612-.77-2.613-1.78-3.875l-.045-.056C6.193 12.842 5 11.352 5 9a7 7 0 0 1 2.05-4.95ZM9 21a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Zm1.586-13.414A2 2 0 0 1 12 7a1 1 0 1 0 0-2 4 4 0 0 0-4 4 1 1 0 0 0 2 0 2 2 0 0 1 .586-1.414Z" clip-rule="evenodd"/>
+            </svg>
+            <svg id="light-mode" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9a3 3 0 0 1 3-3m-2 15h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 6 9c0 4 4 5 4 9h4Z"/>
+            </svg>
+               
+
+              
+              
+        </nav>
+    </header>
+    <section id="main">
+        <!-- MAIN Image -->
+        <img src="images/earth.jpg" alt="Planet Earth.">
+    </section>
+    <section id="services">
+        <!-- ABOUT Section -->
+        <h2 id="title">Services</h2>
+
+
+        <div id="serviceContent">
+            <div>
+                <h2 class="service-opt" id="serviceTitle">SoundWorks</h2>
+                <hr>
+                <p class="service-opt" id="serviceDescription">&nbsp;A sound company.</p>
+            </div>
+            <div id="serviceImage">
+                <img id="serviceImg" src="images/waveform.png" alt="Waveforms.">
+            </div>
+        </div>
+    
+    </section>
+    <section id="serviceCarousel">
+        <div id="slick-carousel">
+            <div><div class="slick-content"><img src="images/recording.jpg" alt="Recording techniques."><h2 id="recording">Recording</h2><p id="recordDesc">Capturing accurate sonics with precise microphone placements for congruent phase coherence.</p></div></div>
+            <div><div class="slick-content"><img src="images/mixing.jpg" alt="Mixing techniques."><h2 id="mixing">Mixing</h2><p id="mixDesc">Setting the appropriate levels at optimal thresholds containing the mix.</p></div></div>
+            <div><div class="slick-content"><img src="images/mastering.jpg" alt="Mastering techniques."> <h2 id="mastering">Mastering</h2><p id="masterDesc">The final polish that meets broadcasting levels for a consistent listening experience.</p></div></div>
+        </div>
+    </section>
+    <section id="win">
+        <h2>Enter for a Chance To Win</h2>
+        <div class="winContainer">
+            <div>
+                <p>Pick a random number for a chance to win free merchandise.</p>
+                <div class="randomNumInput">
+                    <label for="randomNum">Enter a Number Between 1 and 10: </label>
+                    <input type="text" id="randomNum" name="randomNum">
+                </div>
+                <div class="buttonContainer">
+                    <button id="guessButton">Take a Guess!</button>
+                </div>
+            </div>
+            <div class="gResultContainer">
+                <span id="gameResult"><span id="merchPics"></span></span>
+            </div>
+        </div>
+        <div id="winMerch">
+            <div>
+                <img src="images/universoul-hat.jpg" alt="Universoul baseball hat.">
+            </div>
+            <div>
+                <img src="images/universoul-shirt.jpg" alt="Universoul t-shirt.">
+            </div>
+            <div>
+                <img src="images/universoul-mug.jpg" alt="Universoul coffee mug.">
+            </div>
+        </div>
+
+    </section>
+    <section id="contact">
+        <!-- Contact Section -->
+        <div class="contactContainer">
+            <div class="messContainer">
+                <h2 id="messTitle">Send Us A Message</h2>
+                <form>
+                    <div>
+                        <!-- first name (required) -->
+                        <label for="firstName" class="mode">First Name:<span class="reqStar">*</span></label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                    <div>
+                        <!-- lasst name (required) -->
+                        <label for="lastName" class="mode">Last Name:<span class="reqStar">*</span></label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+                    <!-- RADIO Set (preferred method of contact, email or phone) -->
+                    <fieldset>
+                        <legend class="mode">Preferred Method Of Contact:<span class="reqStar">*</span></legend>
+                        <div>
+                            <input type="radio" id="radioPhone" name="contact">
+                            <label for="radioPhone" class="mode">Phone</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioEmail" name="contact">
+                            <label for="radioEmail" class="mode">Email</label>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <!-- phone number (regex) -->
+                        <label for="phone" class="mode">Phone Number:<span id="phRedStar" class="reqStar">*</span></label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div>
+                        <!-- email (regex) -->
+                        <label for="email" class="mode">Email:<span id="emRedStar" class="reqStar">*</span></label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    
+                    <!-- comments (required) -->
+                    <label for="comments" class="mode">Comments:<span class="reqStar">*</span></label>
+                    <div>
+                        <textarea name="comments" id="comments" rows="3"></textarea>
+                    </div>
+                    <input type="submit" id="formSubmit">
+    
+                    <span id="errorMessage"></span>
+                </form>
+    
+                <span id="welcomeMessage"></span>
+            </div>
+            <div class="socialsContainer">
+                <h2 id="socialTitle">Find Us On Social Media</h2>
+                <div class="social">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>
+                        </svg><p class="mode">@UniversoulRecords</p>
+                </div>
+                <div class="social">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                      </svg><p class="mode">@UniversoulRecords</p>
+                </div>
+                <div class="social">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                      </svg><p class="mode">@UniversoulRecords</p>
+                </div>
+                
+                  
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <!-- Copyright -->
+        <small>Copyright &copy; 2025 Universoul Records</small>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+</body>
+</html>
