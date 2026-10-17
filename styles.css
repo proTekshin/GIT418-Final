@@ -86,6 +86,10 @@ textarea.error {
     display: none;
 }
 
+header {
+    /* background-color: #ffca43; */
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -93,6 +97,14 @@ nav {
     height: 36px;
     align-items: center;
 }
+
+.hamburger-menu {
+    all:unset;
+    cursor: pointer;
+    display: flex;
+    display: none;
+}
+
 footer {
     background-color: var(--red);
     height: 24px;
@@ -106,6 +118,8 @@ nav ul {
     /* background-color: aquamarine; */
     /* justify-content: space-between; */
     margin-right: 81px;
+
+
 }
 nav li {
     list-style-type: none;
@@ -123,6 +137,8 @@ h1 {
     font-size: 27px;
     margin-right: 300px;
     color: var(--white);
+
+    /* background-color: #ffca43; */
 }
 h2, h3, h4 {
     font-family: "Bebas Neue", serif;
@@ -422,6 +438,7 @@ svg#light-mode {
 #winMerch div img {
     width: 100%;
     height: 100%;
+    /* height: auto; */
     object-fit: cover;
     border: 1px solid var(--gold);
 }
@@ -436,4 +453,120 @@ svg#light-mode {
 #merchPrize img {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 1280px) {
+    .hamburger-menu {
+        display: block;
+        
+    }
+    
+    .nav-menu {
+        display: none;
+        /* display: flex; */
+
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        left: 0;
+        background-color: var(--red);
+        opacity: 0;
+        transform: translateY(-15px);
+        visibility: hidden;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+        
+        display: flex;
+        gap: 20px;
+
+    }
+
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    h1 {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 30%;
+        text-wrap: nowrap;
+        /* right: 50%; */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+    }
+}
+
+@media (max-width: 1010px) {
+    #winMerch {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+
+    #winMerch div {
+
+    }
+
+    .randomNumInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #randomNum {
+        width: 30%;
+        margin-top: 2em;
+        /* padding-top: 2em; */
+    }
+
+    #winMerch div:nth-child(2) {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #win {
+        height: auto;
+    }
+
+    #win h2 {
+        padding-top: 2em;
+    }
+
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+
+    }
+
+    .messContainer {
+        padding-top: 8em;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
+    .socialsContainer {
+        padding-top: 3em;
+        padding-bottom: 2em;
+        /* background-color: #ffca43; */
+    }
+
+    #contact {
+        height: auto;
+    }
 }
